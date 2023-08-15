@@ -1,0 +1,16 @@
+.widget {
+  .tag_list {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    a {
+      background-color: #666;
+      padding: 5px;
+      color: #fff;
+
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+}
