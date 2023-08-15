@@ -8,9 +8,12 @@ import banner3 from "../../assets/images/menu/banner-3.jpg";
 import banner4 from "../../assets/images/menu/banner-4.jpg";
 import banner5 from "../../assets/images/menu/banner-5.jpg";
 import banner6 from "../../assets/images/menu/banner-6.jpg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  // Get location for active cl
+  const location = useLocation();
+
   return (
     <>
       <h1 className="d-none">Wolmart - Responsive Marketplace HTML Template</h1>
@@ -101,9 +104,9 @@ const Header = () => {
                 className="mobile-menu-toggle w-icon-hamburger"
                 aria-label="menu-toggle"
               ></a>
-              <a href="demo1.html" className="logo ml-lg-0">
+              <Link to="/" className="logo ml-lg-0">
                 <img src={logo} alt="logo" width="144" height="45" />
-              </a>
+              </Link>
               <form
                 method="get"
                 action="#"
@@ -962,22 +965,49 @@ const Header = () => {
                 </div>
                 <nav className="main-nav">
                   <ul className="menu active-underline">
-                    <li className="active">
+                    <li
+                      className={`${location.pathname === "/" ? "active" : ""}`}
+                    >
                       <Link to="/">Home</Link>
                     </li>
-                    <li>
+
+                    <li
+                      className={`${
+                        location.pathname === "/shop" ? "active" : ""
+                      }`}
+                    >
                       <Link to="/shop">Shop</Link>
                     </li>
-                    <li>
+
+                    <li
+                      className={`${
+                        location.pathname === "/blog" ? "active" : ""
+                      }`}
+                    >
                       <Link to="/blog">Blog</Link>
                     </li>
-                    <li>
+
+                    <li
+                      className={`${
+                        location.pathname === "/cart" ? "active" : ""
+                      }`}
+                    >
                       <Link to="/cart">Cart</Link>
                     </li>
-                    <li>
+
+                    <li
+                      className={`${
+                        location.pathname === "/checkout" ? "active" : ""
+                      }`}
+                    >
                       <Link to="/checkout">Checkout</Link>
                     </li>
-                    <li>
+
+                    <li
+                      className={`${
+                        location.pathname === "/account" ? "active" : ""
+                      }`}
+                    >
                       <Link to="/account">Account</Link>
                     </li>
                   </ul>

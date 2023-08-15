@@ -1,4 +1,5 @@
 import shop1 from "../../assets/images/shop/1.jpg";
+import { Link } from "react-router-dom";
 
 const Product = () => {
   return (
@@ -34,19 +35,19 @@ const Product = () => {
           </figure>
           <div className="product-details">
             <div className="product-cat">
-              <a href="shop-banner-sidebar.html">Electronics</a>
+              <a href="#">Electronics</a>
             </div>
             <h3 className="product-name">
-              <a href="product-default.html">3D Television</a>
+              <Link to="/shop/123456">3D Television</Link>
             </h3>
             <div className="ratings-container">
               <div className="ratings-full">
                 <span className="ratings" style={{ width: "100%" }}></span>
                 <span className="tooltiptext tooltip-top"></span>
               </div>
-              <a href="product-default.html" className="rating-reviews">
+              <Link to="/shop/123456" className="rating-reviews">
                 (3 reviews)
-              </a>
+              </Link>
             </div>
             <div className="product-pa-wrapper">
               <div className="product-price">$220.00 - $230.00</div>
