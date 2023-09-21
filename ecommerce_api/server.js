@@ -7,6 +7,7 @@ import userRoute from "./routes/userRoute.js";
 import authRoute from "./routes/authRoute.js";
 import roleRoute from "./routes/roleRoute.js";
 import permissionRoute from "./routes/permissionRoute.js";
+import brandRoute from "./routes/brandRoute.js";
 import { mongoDbConnection } from "./config/db.js";
 import { errorHandler } from "./middlewares/errorHandler.js";
 
@@ -37,6 +38,7 @@ app.use("/api/v1/user", userRoute);
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/role", roleRoute);
 app.use("/api/v1/permission", permissionRoute);
+app.use("/api/v1/brand", brandRoute);
 
 // errorHandler.
 app.use(errorHandler);
